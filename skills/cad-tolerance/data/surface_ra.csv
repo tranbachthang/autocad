@@ -1,0 +1,23 @@
+# Bảng gợi ý CẤP CHÍNH XÁC (IT) + ĐỘ NHÁM (Ra, µm) theo CHỨC NĂNG bề mặt
+# Nguồn: bảng kinh điển giáo trình Công nghệ chế tạo máy (đối chiếu ISO 286 cho IT,
+#        TCVN 5707 / ISO 1302 cho ký hiệu nhám). Giá trị là ĐIỂN HÌNH — khi đã nạp
+#        tài liệu riêng (learn.py) thì tra chéo trước khi chốt.
+# Cot: keywords (cach nhau bang |), nhom, IT, Ra_min, Ra_max, kieu_lap, ghi_chu
+keywords,nhom,IT,Ra_min,Ra_max,kieu_lap,ghi_chu
+ổ lăn|vòng bi|bearing,Mặt lắp ổ lăn (trên trục),IT6,0.4,0.8,k6|js6|m6,Mài tròn ngoài; chọn k/js/m theo tải trọng và kiểu lắp
+ổ lăn|vòng bi|bearing,Mặt lắp ổ lăn (lỗ thân hộp),IT7,0.4,0.8,H7,Doa/mài lỗ; cần đồng tâm với mặt chuẩn
+bạc|ống lót|bushing,Mặt lắp bạc,IT7,0.63,1.25,H7|h6,Ép hoặc lắp có định vị
+bánh răng|puli|đĩa xích|ròng rọc,Mặt lắp bánh răng / puli,IT7,0.63,1.25,H7|h6|js6,Định tâm và truyền mômen
+trượt|dẫn hướng|con trượt|trượt dọc,Mặt trượt,IT7,0.32,0.8,H7|f7|g6,Nhám thấp để giảm mài mòn và kẹt
+định tâm|đồng tâm|định vị,Mặt định tâm,IT6,0.63,1.25,H7|h6,Cần độ đồng tâm cao
+ép|ép cố định|mối ghép cố định,Mặt lắp ép cố định,IT7,0.63,1.25,H7|p6|s6,Kiểm tra trước khi ép; có thể gia công nguội
+tháo lắp|bu lông|bulong|vít cấy,Mặt lắp tháo lắp thường,IT8,1.25,3.2,H8|h8|H9|h9,Không cần chính xác cao
+then|rãnh then|then hoa,Rãnh then / then hoa,IT9,3.2,6.3,N9|h9|H9,Phay rãnh then bằng dao ngón hoặc dao đĩa
+ren|taro|vít|bu lông ren,Ren,IT6,3.2,6.3,6H|6g,Cấp ren theo TCVN 2248 / ISO 965
+làm kín|gioăng|đệm|gasket,Mặt làm kín tĩnh,IT8,1.6,3.2,H8|H9,Ép gioăng — nhám quá thấp cũng không giữ được keo
+phớt|seal|làm kín động,Mặt làm kín động (trục qua phớt),IT7,0.2,0.4,H7|h6,Mài + đánh bóng; không xước dọc trục
+tự do|không lắp|mặt ngoài|mặt thô,Mặt tự do (không lắp ghép),IT12,6.3,12.5,-,Chỉ cần kích thước bao
+kê|mặt bắt vít|mặt đế|mặt bích,Mặt kê / mặt bắt vít,IT11,3.2,6.3,-,Mặt phẳng gá kê, phay một lần
+khoan|lỗ khoan|khoan lỗ,Lỗ khoan thường,IT12,6.3,12.5,-,Khoan mũi xoắn, không doa
+chuẩn|mặt chuẩn|mặt gá,Mặt chuẩn định vị khi gia công,IT7,1.25,2.5,-,Phải phẳng + nhám thấp để gá chính xác
+chốt|chốt định vị|lỗ chốt,Lỗ chốt định vị,IT7,0.8,1.6,H7|h6,Doa tinh sau khi khoan

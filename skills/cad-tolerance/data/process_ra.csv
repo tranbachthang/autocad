@@ -1,0 +1,25 @@
+# Ra (µm) và cấp IT đạt được theo PHƯƠNG PHÁP GIA CÔNG
+# Nguồn: bảng kinh điển giáo trình Công nghệ chế tạo máy.
+# Dùng để CẢNH BÁO khi yêu cầu nhám/dung sai chặt hơn khả năng của phương pháp.
+# Cot: keywords, phuong_phap, Ra_min, Ra_max, IT_tot_nhat, ghi_chu
+keywords,phuong_phap,Ra_min,Ra_max,IT_tot_nhat,ghi_chu
+đúc cát|đúc,Đúc cát,12.5,25,IT16,Là phôi; phải gia công lại mặt lắp
+rèn|dập nóng,Rèn / dập nóng,6.3,25,IT14,Là phôi; lớp vỏ cứng cần cắt bỏ
+khoan,Khoan,6.3,12.5,IT11,Không đạt đồng tâm cao
+khoét,Khoét,3.2,6.3,IT9,Mở rộng lỗ sau khoan
+doa,Doa,0.8,3.2,IT7,Doa tinh đạt IT7
+tiện thô,Tiện thô,12.5,25,IT11,Bước đầu phá lớp dư
+tiện bán tinh,Tiện bán tinh,3.2,6.3,IT9,
+tiện tinh,Tiện tinh,0.8,1.6,IT7,Bước tinh, mặt trụ ngoài
+tiện mảnh,Tiện mảnh (dao kim cương),0.1,0.4,IT6,Rất nhẵn, dùng cho ổ trượt
+phay thô,Phay thô,6.3,12.5,IT11,Mặt phẳng
+phay tinh,Phay tinh,1.6,3.2,IT8,
+phay mảnh,Phay mảnh,0.4,0.8,IT6,
+bào,Bào,3.2,12.5,IT10,Mặt phẳng dài
+mài thô,Mài thô,0.8,1.6,IT7,Sau nhiệt luyện
+mài tinh,Mài tinh,0.2,0.4,IT5,
+nghiền|honing,Nghiền (honing),0.05,0.2,IT4,Lỗ xy-lanh / ổ trượt
+đánh bóng,Đánh bóng,0.012,0.1,IT4,Không sửa được hình dạng (chỉ bóng)
+chuốt,Chuốt,0.4,1.6,IT6,Lỗ then hoa, lỗ tròn then
+xọc,Xọc,3.2,6.3,IT9,Rãnh then trong lỗ
+cắt dây|EDM,Cắt dây EDM,1.6,3.2,IT9,Hình dạng phức tạp, vật liệu cứng

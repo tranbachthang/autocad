@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+auth.json
+sessions/
+*.log
+.DS_Store
+models-store.json
+# Kho tri thuc nap tai may dich — khong mang tu may khac
+knowledge/*
+!knowledge/README.md

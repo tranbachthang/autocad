@@ -1,0 +1,5 @@
+# rait.py khong can thu vien ngoai (chi dung stdlib).
+# learn.py can them tuy dinh dang tai lieu:
+pypdf>=4.0          # doc .pdf (neu PDF la ban scan thi can OCR)
+python-docx>=1.1    # doc .docx
+easyocr>=1.7        # OCR anh / trang scan (vi+en)
