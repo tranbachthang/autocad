@@ -1,8 +1,8 @@
 {
-  "name": "autocad-assistant",
-  "version": "0.1.0",
-  "description": "AI agent thiet ke co khi: goi y cap chinh xac (IT) + do nham be mat (Ra) cho tung be mat chi tiet may",
-  "keywords": ["pi-package", "autocad", "cad", "mechanical", "tolerance", "iso286", "roughness"],
+  "name": "phuoc-jr",
+  "version": "0.2.0",
+  "description": "Phuoc_JR - tro ly AI thiet ke co khi: goi y cap chinh xac (IT) + do nham be mat (Ra) cho tung be mat chi tiet may",
+  "keywords": ["pi-package", "autocad", "cad", "mechanical", "tolerance", "iso286", "roughness", "phuoc-jr"],
   "license": "MIT",
   "author": "Tran Bach Thang",
   "pi": {

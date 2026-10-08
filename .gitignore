@@ -7,6 +7,9 @@ sessions/
 *.log
 .DS_Store
 models-store.json
-# Kho tri thuc nap tai may dich — khong mang tu may khac
+# Tang 1 - kho tri thuc nap tai may dich (khong mang tu may khac)
 knowledge/*
 !knowledge/README.md
+# Lich su chat web + session pi + log autopush
+.pi/web_sessions/
+logs/

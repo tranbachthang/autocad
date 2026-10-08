@@ -4,11 +4,11 @@ description: Gợi ý CẤP CHÍNH XÁC (IT) và ĐỘ NHÁM BỀ MẶT (Ra) cho
 license: MIT
 allowed-tools: bash, read, write
 metadata:
-  version: 0.1.0
-  purpose: "Gợi ý Ra/IT cho bề mặt chi tiết máy + nạp tài liệu tại chỗ"
-  dependencies: "python3 (khong can thu vien ngoai cho rait.py); learn.py: tuy dinh dang (pypdf/python-docx/easyocr)"
-  tests: "bash:python scripts/rait.py --selftest && python scripts/learn.py --selftest"
-  triggers: "dung sai, IT, Ra, nhám bề mặt, độ bóng, ký hiệu nhám, lắp ghép, H7, h6, ISO 286, TCVN 5707, thiết kế máy, CAD, AutoCAD, mặt cắt"
+  version: 0.2.0
+  purpose: "Gợi ý Ra/IT cho bề mặt chi tiết máy + nạp tài liệu tại chỗ + tự đẩy GitHub"
+  dependencies: "python3 (khong can thu vien ngoai cho rait.py/autopush.py); learn.py: tuy dinh dang (pypdf/python-docx/easyocr)"
+  tests: "bash:python scripts/rait.py --selftest && python scripts/learn.py --selftest && python scripts/autopush.py --selftest"
+  triggers: "dung sai, IT, Ra, nhám bề mặt, độ bóng, ký hiệu nhám, lắp ghép, H7, h6, ISO 286, TCVN 5707, thiết kế máy, CAD, AutoCAD, mặt cắt, phát hiện mới, push github"
 ---
 
 # CAD Tolerance — gợi ý Ra/IT cho bề mặt
@@ -30,6 +30,12 @@ python scripts/learn.py add "<file hoac thu muc tai lieu>" [--recursive]
 python scripts/learn.py search "nham be mat"
 python scripts/learn.py list
 python scripts/learn.py --selftest
+
+python scripts/autopush.py status                  # co gi chua push
+python scripts/autopush.py push                    # commit + push
+python scripts/autopush.py note "<phat hien moi>"   # ghi findings/ roi push
+python scripts/autopush.py watch --interval 1800   # tu push dinh ky
+python scripts/autopush.py --selftest
 ```
 
 ## Quy trình gợi ý (5 bước, không bỏ bước)
@@ -80,6 +86,26 @@ Hỗ trợ: `.txt .md .csv .json` (đọc thẳng) · `.pdf` (pypdf) · `.docx` 
 | `data/surface_ra.csv` | chức năng bề mặt → IT + Ra + kiểu lắp | bảng kinh điển giáo trình CNCTM |
 | `data/process_ra.csv` | phương pháp gia công → Ra đạt được + IT tốt nhất | bảng kinh điển giáo trình CNCTM |
 
+## Phát hiện mới → ghi lại rồi đẩy lên GitHub
+
+Dùng khi thấy điều **chưa có** trong bảng/tài liệu: bảng thiếu một loại bề mặt, một ngưỡng Ra sai,
+phương pháp gia công bị đánh giá sai…
+
+```bash
+python scripts/autopush.py note "<mô tả phát hiện + nguồn>"      # ghi findings/<ngày>.md rồi push
+```
+
+Nếu phát hiện là **quy tắc chung** (áp cho mọi lần sau) thì phải **sửa tầng dữ liệu**, không chỉ ghi note:
+
+1. Sửa `data/surface_ra.csv` / `data/process_ra.csv` / `data/iso286_it.csv`, hoặc `SKILL.md`
+   (bump `metadata.version` + thêm dòng vào `## Changelog`).
+2. Chạy `python scripts/rait.py --selftest` — phải vẫn `SELFTEST PASS`.
+3. `python scripts/autopush.py push`.
+
+**Cấm** sửa bảng rồi để đó — không push là coi như chưa học được gì.
+
 ## Changelog
 
+- **0.2.0** — thêm `autopush.py` (tự commit/push định kỳ + ghi phát hiện mới vào `findings/`);
+  skill chạy trong agent **Phuoc_JR** (`.pi/agents/` 5 sub-agent + `MEMORY.md`).
 - **0.1.0** — bản đầu: `rait.py` (suggest/it/ra/list + selftest) + `learn.py` (add/search/list/stats + selftest) + 3 bảng dữ liệu.
